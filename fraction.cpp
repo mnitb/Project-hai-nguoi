@@ -51,11 +51,12 @@ Fraction add_up(Fraction a, Fraction b) {
     return result;
 }
 
-bool cmpl(const Fraction a, const Fraction b) {
-    if (a.num * b.den == a.den * b.num)
+bool cmpl(const Fraction& a, const Fraction& b) {
+    double fa = (double)a.num / a.den, fb = (double)b.num / b.den;
+    if (fa == fb)
         return a.num > b.num;
     else
-        return a.num * b.den > a.den * b.num;
+        return fa > fb;
 }
 
 void selection_sort(Fraction listf[], const int& n) {
