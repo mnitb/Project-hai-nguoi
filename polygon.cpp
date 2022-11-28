@@ -10,14 +10,14 @@ void setSideOfPolygon(Polygon &a) {
     cout << "Nhap so canh cua da giac: ";
     cin >> a.PolygonSides;
     while (a.PolygonSides <= 2) {
-        cout << "So canh khong hop le.\n";
+        cout << "So canh khong hop le.\nVui long nhap lai so canh da giac\n";
         cin>>a.PolygonSides;
     }
     for (int i = 0; i < a.PolygonSides; i++) {
         cout << "Nhap chieu dai canh thu "<<i+1<<" cua da giac: ";
         cin >> a.length[i];
         while (a.length[i] <= 0) {
-            cout << "Chieu dai canh khong hop le\n";
+            cout << "Chieu dai canh khong hop le\nVui long nhap chieu dai canh\n";
             cin>>a.length[i];
         }
     }
