@@ -23,8 +23,8 @@ void setSideOfPolygon(Polygon &a) {
     }
 }
 
-int PerimeterOfPolygon(Polygon &a) {
-    int P = 0;
+float PerimeterOfPolygon(Polygon &a) {
+    float P = 0;
     for (int i = 0; i < a.PolygonSides; i++)
         P += a.length[i];
     return P;
